@@ -10,10 +10,11 @@ class Login(QMainWindow):
         uic.loadUi("SS7/GUI/Login.ui", self)
 
         # self.btnRegister.clicked.connect(self.show_register)
-        self.btnLogin.clicked.connect(self.check_login)
+        self.btnLogin.clicked.connect(self.check_login) # 1 signal
+    # self  objectName #tên sự kiện.       gọi check_login
         self.msg_box = QMessageBox()
         
-    def check_login(self):
+    def check_login(self): # Slot
         email = self.txtEmail.text() # lấy ra thông tin người dùng nhập tại đây
         password = self.txtPassword.text() # lấy ra mật khẩu
         if email == "admin@example.com" and password == "admin":
